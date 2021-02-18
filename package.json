@@ -9,7 +9,7 @@
   "author": "MathisTLD",
   "license": "ISC",
   "dependencies": {
-    "@campbell/builder": "file:../builder",
+    "@campbell/builder": "^1.0.0-beta.0",
     "fs-extra": "^9.0.1",
     "source-map-support": "^0.5.19",
     "yargs": "^16.2.0"
