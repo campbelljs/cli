@@ -1,0 +1,30 @@
+{
+  "name": "@campbell/cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "npm publish --access public --tag beta && git push && git push --tags"
+  },
+  "author": "MathisTLD",
+  "license": "ISC",
+  "dependencies": {
+    "@campbell/builder": "file:../builder",
+    "fs-extra": "^9.0.1",
+    "source-map-support": "^0.5.19",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/campbelljs/cli.git"
+  },
+  "bin": {
+    "campbell": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/campbelljs/cli/issues"
+  },
+  "homepage": "https://github.com/campbelljs/cli#readme",
+  "description": ""
+}
