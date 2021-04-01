@@ -3,7 +3,7 @@ const Builder = require("@campbell/builder");
 module.exports = {
   command: "start [port] [dev] [inspect]",
   describe: "Start the campbell server in current dir",
-  handler: argv => {
+  handler: (argv) => {
     if (argv.port) process.env.CAMPBELL_SERVER_PORT = argv.port;
 
     if (!process.env.NODE_ENV) process.env.NODE_ENV = "production";
@@ -11,7 +11,6 @@ module.exports = {
     if (argv.inspect) require("inspector").open();
 
     const builder = new Builder(process.cwd());
-    const config = builder.config;
     builder.build().then(() => {
       // process.cwd must match app's root dir
       process.chdir(builder.resolvePath("#output"));
@@ -20,5 +19,5 @@ module.exports = {
       // exec app's main script
       require(builder.resolvePath(["#output", "main"]));
     });
-  }
+  },
 };
